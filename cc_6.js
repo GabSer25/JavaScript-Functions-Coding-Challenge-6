@@ -16,4 +16,16 @@ const calculateSalesTax = function(amount, taxRate) {
 // Test Cases
 calculateSalesTax(100, 0.07);  // Expected output: "Sales Tax: $7"
 calculateSalesTax(500, 0.1);   // Expected output: "Sales Tax: $50"
+// Task 3: Employee Bonus Calculation
+const calculateBonus = (salary, performanceRating) => {
+    let bonusPercentage = performanceRating === "Excellent" ? 0.2 :
+                          performanceRating === "Good" ? 0.1 :
+                          performanceRating === "Average" ? 0.05 : 0;
+    let bonus = salary * bonusPercentage;
+    console.log(`Bonus: $${bonus}`);
+};
+
+// Test Cases
+calculateBonus(5000, "Excellent");  // Expected output: "Bonus: $1000"
+calculateBonus(7000, "Good");       // Expected output: "Bonus: $700"
 
